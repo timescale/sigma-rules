@@ -15,17 +15,16 @@ This skill teaches AI agents the full [Sigma v2.1.0 specification](https://githu
 
 ## Install
 
-```
-/learn @timescale/sigma-rules
+```bash
+npx skills add timescale/sigma-rules -g -y
 ```
 
-Or manually copy the `SKILL.md` and `references/` directory into your skills folder:
+Or install for a specific agent:
 
-| Tool | Location |
-|------|----------|
-| Cursor | `~/.cursor/skills/sigma-rules/` |
-| Claude Code | `~/.claude/skills/sigma-rules/` |
-| GitHub Copilot | `~/.copilot/skills/sigma-rules/` |
+```bash
+npx skills add timescale/sigma-rules -g -a cursor -y
+npx skills add timescale/sigma-rules -g -a claude-code -y
+```
 
 ## Structure
 
