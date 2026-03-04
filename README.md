@@ -1,0 +1,63 @@
+# Sigma Rules Skill
+
+An [Agent Skill](https://agentskill.sh/) for authoring [Sigma](https://github.com/SigmaHQ/sigma) detection rules, correlation rules, filter rules, and processing pipelines.
+
+## What This Skill Does
+
+This skill teaches AI agents the full [Sigma v2.1.0 specification](https://github.com/SigmaHQ/sigma-specification) so they can:
+
+- Write correct detection rules from natural language descriptions
+- Create correlation rules (event_count, value_count, temporal, and 5 more types)
+- Author filter rules for centralized tuning
+- Build processing pipelines for field mapping (ECS, Splunk CIM, etc.)
+- Use proper field modifiers, condition expressions, and multi-document YAML
+- Validate rules against the specification checklist
+
+## Install
+
+```
+/learn @timescale/sigma-rules
+```
+
+Or manually copy the `SKILL.md` and `references/` directory into your skills folder:
+
+| Tool | Location |
+|------|----------|
+| Cursor | `~/.cursor/skills/sigma-rules/` |
+| Claude Code | `~/.claude/skills/sigma-rules/` |
+| GitHub Copilot | `~/.copilot/skills/sigma-rules/` |
+
+## Structure
+
+```
+sigma-rules/
+├── SKILL.md                          # Main skill — templates, examples, checklist
+└── references/
+    ├── detection-rules.md            # Detection rule format deep dive
+    ├── correlation-rules.md          # All 8 correlation types with examples
+    ├── filter-rules.md               # Filter rule format and usage
+    ├── pipelines.md                  # Pipeline transforms and conditions
+    ├── modifiers.md                  # All 30 field modifiers
+    └── condition-syntax.md           # Condition expression grammar
+```
+
+The main `SKILL.md` covers the essential authoring workflow with templates and worked examples. Reference files provide deeper detail and are loaded on demand.
+
+## Coverage
+
+- Sigma Specification v2.1.0 (backward-compatible with v2.0.0)
+- 30 field modifiers with compatibility rules
+- 8 correlation types (event_count, value_count, temporal, temporal_ordered, value_sum, value_avg, value_percentile, value_median)
+- 26 pipeline transformation types
+- Multi-document YAML (global, reset, repeat actions)
+- Condition expression grammar (not > and > or, quantifiers, wildcards)
+
+## References
+
+- [Sigma Specification](https://github.com/SigmaHQ/sigma-specification)
+- [SigmaHQ Rule Repository](https://github.com/SigmaHQ/sigma)
+- [pySigma](https://github.com/SigmaHQ/pySigma)
+
+## License
+
+MIT
